@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tour if DOM</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      li {
+        color: burlywood;
+      }
+      #fruits-title{
+        color: black;
+      }
+      .important-places{
+        color: cadetblue;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to my DOM</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero facere
+        placeat necessitatibus amet modi aspernatur quidem odio voluptatem id
+        atque illo architecto corrupti praesentium repellendus dicta autem, nisi
+        sequi cumque.
+      </p>
+    </header>
+    <main>
+      <section>
+        <h1>My awesome DOM</h1>
+        <ul>
+          <li>Aparna</li>
+          <li>Purna</li>
+          <li>Bou</li>
+        </ul>
+      </section>
+      <section>
+        <h1 id="fruits-title">Fruits i like</h1>
+        <ul>
+          <li>Apple</li>
+          <li>Orange</li>
+          <li>Carrot</li>
+        </ul>
+      </section>
+      <section>
+        <h1 id="places-title">Places i like to visit</h1>
+        <ul>
+            <li class="important-places">Tar basa</li>
+            <li class="important-places">Shundarban</li>
+            <li class="important-places">Bandarban</li>
+            <li class="other-palce">outer country</li>
+        </ul>
+      </section>
+    </main>
+    <script src="dom.js"></script>
+    <script>
+      // const student = {
+      //     name: 'Purna',
+      //     id: 40,
+      //     study: function(time){
+      //         console.log(time, 'study kortese');
+      //     }
+      // }
+      // console.log('adding JS inside the html file');
+
+      const liColection = document.getElementsByTagName("li");
+      // console.log(liColection);
+      for (const li of liColection) {
+        // console.log(li.innerText);
+      }
+
+      const fruitsTitle = document.getElementById('fruits-title');
+      fruitsTitle.innerText = 'Fruits changed by JS';
+
+      const allHeadings = document.getElementsByTagName("h1");
+      for (const h1 of allHeadings) {
+        // console.log(h1.innerText);
+      }
+
+      const places = document.getElementsByClassName('important-places');
+      for(const place of places){
+        console.log(place.innerText);
+      }
+    </script>
+  </body>
+</html>
